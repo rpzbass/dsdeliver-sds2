@@ -1,4 +1,3 @@
-import {ReactComponent as Pizza} from './pizza.svg';
 import { formatPrice } from  './helpers';
 import { Product } from './types';
 

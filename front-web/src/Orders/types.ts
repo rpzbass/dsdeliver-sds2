@@ -5,6 +5,7 @@ export type Product = {
     price: number;
     description: string;
     imageUri: string;
+   
 }
 
 export type OrderLocationdata = {
@@ -15,3 +16,15 @@ export type OrderLocationdata = {
 
 
 }
+
+type ProductId = {
+
+    id: number;
+}
+
+export type OrderPayload = {
+
+    products : ProductId[];
+
+} & OrderLocationdata;  //o e comercial realiza o merge entre as entidades(fundir)
+

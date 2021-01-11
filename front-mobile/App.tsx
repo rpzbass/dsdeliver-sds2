@@ -2,12 +2,12 @@ import { useFonts, OpenSans_400Regular, OpenSans_700Bold } from '@expo-google-fo
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Header from './src/Header';
-import Home from './src/Home';
 import AppLoading from 'expo-app-loading';
+import  Routers  from './src/Routers';
+import Header from './src/Header';
 
 
-export default function App() {
+function App() {
   let [fontsLoaded] = useFonts({
     OpenSans_400Regular,
     OpenSans_700Bold
@@ -18,12 +18,14 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <Header />
-      <Home />
 
-    </View>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+       
+        <Routers/>
+
+      </View>
+    
   );
 }
 
@@ -34,3 +36,5 @@ const styles = StyleSheet.create({
 
   },
 });
+
+export default App;

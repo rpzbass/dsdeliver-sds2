@@ -1,20 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
+import Header from '../Header';
+import OrderCard from '../OrderCard';
 
 
 
-const handlerOnPress = () => {
-
-
-}
 function Orders() {
 
 
     return (
         <>
-            <View>
-                 <Text>Listagem de pedidos</Text>
-            </View>
+            <Header/>
+            <ScrollView>
+                 <OrderCard/>
+                 <OrderCard/>
+                 <OrderCard/>
+                 <OrderCard/>
+                 <OrderCard/>
+            </ScrollView>
         </>
     );
 }
